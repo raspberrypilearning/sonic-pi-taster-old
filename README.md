@@ -52,9 +52,9 @@ This is the Sonic Pi application interface. It has three windows. The largest on
 2.	Select Workspace 1.
 3.	Type: 
 
-```
-play 60
-```
+  ```
+  play 60
+  ```
 4.	Click on the play icon at the top of the screen. What happens?
 
 5.	What happens if you type pley 60 and click on the play icon?
@@ -63,27 +63,25 @@ This is an example of a bug in your code. In later activities, if the error pane
 
 6.	Now type:
 
-```
-play 60
-play 67
-play 69
-```
+  ```
+  play 60
+  play 67
+  play 69
+  ```
 7.	Click on the play icon at the top of the screen. What happens?
 
 The computer is playing each note in sequence (ne after the after) but it is happening so fast that to us they sound like they are playing at the same time. 
 
 8.	We need to tell the computer to pause between each note. We can do this by typing the following after each play:
 
-```
-sleep 1
-```
-
-## Step 2: Frere Jacques
-
+  ```
+  sleep 1 
+  ```
 The value entered after the word sleep represents time in seconds. Using the value 1 represents one second. What would you type for half a second?
 
 9.	Now write a sequence of play and sleep to make a cool sounding tune!
 
+## Step 2: Frere Jacques
 Now you have mastered the basics of Sonic Pi, let’s code a tune! 
 
 The values that you have been typing after the word ‘play’ represent notes. In fact they are MIDI note numbers. This means we can translate songs played on a piano into Sonic Pi!
@@ -106,40 +104,7 @@ We are going to code ‘Frere Jacques’. The song begins with:
 
 2.	Type the following code:
 
-```
-play 60
-sleep 0.5
-play 62
-sleep 0.5
-play 64
-sleep 0.5
-play 60
-sleep 0.5
-```
-3.	Now click on the play icon at the top of the screen and it will play the first part of ‘Frere Jacques’. 
-
-This first section plays twice. How could you repeat it? You could type the same section out again, or we could start to introduce loops to your code.
-
-4.	At the top of your code, above the first play 60 type:
-
-```
-2.times do
-```
-
-5.	And at the bottom of your code, below sleep 0.5 type:
-
-```
-end
-```
-
-6.	Click on the play icon at the top of the screen. What happens?
-
-Let’s play this part in Sonic Pi.
-
-In this example, you can see that some lines of code are indented. This makes it easier to read your code and check for any bugs if it does not work when you press the play button. You can press the space bar twice to indent a line of code.
-
-```
-2.times do
+  ```
   play 60
   sleep 0.5
   play 62
@@ -148,6 +113,86 @@ In this example, you can see that some lines of code are indented. This makes it
   sleep 0.5
   play 60
   sleep 0.5
+  ```
+3.	Now click on the play icon at the top of the screen and it will play the first part of ‘Frere Jacques’. 
+
+This first section plays twice. How could you repeat it? You could type the same section out again, or we could start to introduce loops to your code.
+
+4.	At the top of your code, above the first play 60 type:
+
+  ```
+  2.times do
+  ```
+
+5.	And at the bottom of your code, below sleep 0.5 type:
+
+  ```
+  end
+  ```
+
+6.	Click on the play icon at the top of the screen. What happens?
+
+Let’s play this part in Sonic Pi.
+
+In this example, you can see that some lines of code are indented. This makes it easier to read your code and check for any bugs if it does not work when you press the play button. You can press the space bar twice to indent a line of code.
+
+  ```
+  2.times do
+    play 60
+    sleep 0.5
+    play 62
+    sleep 0.5
+    play 64
+    sleep 0.5
+    play 60
+    sleep 0.5
+  end
+  ```
+
+**Things to try:**
+A)	Complete the Frere Jacque song by using the table to translate musical notes into Sonic Pi note values.
+
+C   D   E   C   C   D   E   C
+E   F   G   E   F   G
+G   A   G   F   E   C   G   A   G   F   E   C
+C   D   E   C   C   D   E   C
+
+B)	Create your own tune using what you have learned so far.
+
+
+##Step 3: Change the Sounds
+
+It’s time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called ```"pretty_bell"```. 
+
+To use a different synth, you need to add the code: ```with_synth "name of synth"``` above the sequence of code you want to use it.
+
+In this example, ```"fm"`` is the name of the synth:
+
+```
+with_synth "fm"
+2.times do
+  play 60
+  sleep 0.5
+  play 67
+  sleep 0.5
 end
 ```
 
+**Synths to try:**
+```
+"pretty_bell"
+"dull_bell"
+"beep"
+"saw_beep"
+"fm"
+```
+
+**Activity Checklist:**
+
+1.	At the top of your code, above the 2.times do add the following:
+
+  ```with_synth "fm"``` 
+
+2.	Click on the play icon at the top of the screen. 
+
+3.	Change the synth to find one that you like the sound of from the table of synths to try.
