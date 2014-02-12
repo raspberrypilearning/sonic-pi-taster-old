@@ -90,7 +90,15 @@ The values that you have been typing after the word ‘play’ represent notes. 
 
 We are going to code ‘Frere Jacques’. The song begins with:
 
-C	D	E	C 	or	60	62	64	60 	in MIDI notes.
+```C D E C``` 	or	```60	62 64	60``` 	in MIDI notes.
+
+**Music Notes to MIDI Note Values**
+
+| C       | D      | E     | F     | G     | A     | B     |
+| :-----: |:------:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 60      | 62     | 64    | 65    | 67    | 69    | 71    |
+
+
 
 **Activity Checklist:**
 
@@ -129,3 +137,17 @@ end
 Let’s play this part in Sonic Pi.
 
 In this example, you can see that some lines of code are indented. This makes it easier to read your code and check for any bugs if it does not work when you press the play button. You can press the space bar twice to indent a line of code.
+
+```
+2.times do
+  play 60
+  sleep 0.5
+  play 62
+  sleep 0.5
+  play 64
+  sleep 0.5
+  play 60
+  sleep 0.5
+end
+```
+
