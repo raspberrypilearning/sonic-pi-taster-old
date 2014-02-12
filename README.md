@@ -41,6 +41,7 @@ Password: raspberry
 
 7.	Once you have logged in, type startx to load the desktop.
 
+![alt text](Screen-Shot-2012-12-24-at-10.59.55-1024x722.png "Connecting your Raspberry Pi")
 
 ## Step 1: First Sounds with Sonic Pi
 
@@ -54,7 +55,7 @@ This is the Sonic Pi application interface. It has three windows. The largest on
 2.	Select Workspace 1.
 3.	Type: 
 
-  ```
+  ```ruby
   play 60
   ```
 4.	Click on the play icon at the top of the screen. What happens?
@@ -65,7 +66,7 @@ This is the Sonic Pi application interface. It has three windows. The largest on
 
 6.	Now type:
 
-  ```
+  ```ruby
   play 60
   play 67
   play 69
@@ -76,7 +77,7 @@ This is the Sonic Pi application interface. It has three windows. The largest on
 
 8.	We need to tell the computer to pause between each note. We can do this by typing the following after each play:
 
-  ```
+  ```ruby
   sleep 1 
   ```
 The value entered after the word sleep represents time in seconds. Using the value 1 represents one second. What would you type for half a second?
@@ -88,11 +89,11 @@ The value entered after the word sleep represents time in seconds. Using the val
 
 Now you have mastered the basics of Sonic Pi, let’s code a tune! 
 
-The values that you have been typing after the word ‘play’ represent notes. In fact they are MIDI note numbers. This means we can translate songs played on a piano into Sonic Pi!
+The values that you have been typing after the word 'play' represent notes. In fact they are MIDI note numbers. This means we can translate songs played on a piano into Sonic Pi!
 
-We are going to code ‘Frere Jacques’. The song begins with:
+We are going to code 'Frere Jacques'. The song begins with:
 
-```C D E C``` 	or	```60	62 64	60``` 	in MIDI notes.
+`C D E C` 	or	`60 62 64 60` 	in MIDI notes.
 
 **Music Notes to MIDI Note Values**
 
@@ -108,7 +109,7 @@ We are going to code ‘Frere Jacques’. The song begins with:
 
 2.	Type the following code:
 
-  ```
+  ```ruby
   play 60
   sleep 0.5
   play 62
@@ -124,13 +125,13 @@ We are going to code ‘Frere Jacques’. The song begins with:
 
 4.	At the top of your code, above the first play 60 type:
 
-  ```
+  ```ruby
   2.times do
   ```
 
 5.	And at the bottom of your code, below sleep 0.5 type:
 
-  ```
+  ```ruby
   end
   ```
 
@@ -140,7 +141,7 @@ We are going to code ‘Frere Jacques’. The song begins with:
 
   In this example, you can see that some lines of code are indented. This makes it easier to read your code and check for   any bugs if it does not work when you press the play button. You can press the space bar twice to indent a line of code.
 
-  ```
+  ```ruby
   2.times do
     play 60
     sleep 0.5
@@ -170,13 +171,13 @@ B)	Create your own tune using what you have learned so far.
 
 ##Step 3: Change the Sounds
 
-It’s time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called ```"pretty_bell"```. 
+It’s time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `"pretty_bell"`. 
 
-To use a different synth, you need to add the code: ```with_synth "name of synth"``` above the sequence of code you want to use it.
+To use a different synth, you need to add the code: `with_synth "name of synth"` above the sequence of code you want to use it.
 
-In this example, ```"fm"`` is the name of the synth:
+In this example, `"fm"` is the name of the synth:
 
-```
+```ruby
 with_synth "fm"
 2.times do
   play 60
@@ -187,7 +188,7 @@ end
 ```
 
 **Synths to try:**
-```
+```ruby
 "pretty_bell"
 "dull_bell"
 "beep"
@@ -199,7 +200,7 @@ end
 
 1.	At the top of your code, above the 2.times do add the following:
 
-  ```with_synth "fm"``` 
+  `with_synth "fm"`
 
 2.	Click on the play icon at the top of the screen. 
 
@@ -219,11 +220,11 @@ Music often has a repeating backing track with a separate melody played over the
 
 1.	Click on Workspace 3 tab.
 
-2.	The code we use to play two tunes at the same time needs to be encased in ```in_thread do``` and ```end``
+2.	The code we use to play two tunes at the same time needs to be encased in `in_thread do` and `end`
 
 3.	Underneath type your tune. Here I’ve used Frere Jacques from the earlier activity:
 
-  ```
+  ```ruby
 	in_thread do
 	  with_synth "saw_beep"
 	  2.times do
@@ -239,13 +240,13 @@ Music often has a repeating backing track with a separate melody played over the
 
 4.	Type:
 
-  ```
+  ```ruby
   in_thread do
     with_synth "pretty_bell"
-	  30.times do
-	    play 49
-	    sleep 1
-	  end
+    30.times do
+    	play 49
+    	sleep 1
+    end
   end
   ```
   
