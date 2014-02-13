@@ -49,7 +49,7 @@ Let’s play some sounds.
 
 This is the Sonic Pi application interface. It has three windows. The largest one is for writing your code and we call it the Programming Panel. The top right hand window is the Output Panel and it displays information about your program as it runs. Underneath is the third window; the ‘Error Panel’ which displays information if there is a problem with your program or a bug.
 
-![alt text]( "Sonic Pi Interface")
+![alt text](Sonic_pi.png "Sonic Pi Interface")
 
 **Activity Checklist:**
 
