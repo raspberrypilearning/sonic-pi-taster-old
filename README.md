@@ -4,7 +4,7 @@
 
 We are going to make some funky songs on the Raspberry Pi. A Raspberry Pi is a small computer that we can use to create exciting technology. It was created in the UK by the Raspberry Pi Foundation to help young people like you learn how to code.
 
-This small computer features amazing HD (high-definition) quality video and playback, sports high quality audio and has the ability to play 3D games. 
+This small computer features amazing HD (high-definition) quality video and playback, sports high quality audio and has the ability to play 3D games.
 
 To get going with your Raspberry Pi, you will need to connect cables and add an SD card before logging in.
 
@@ -62,9 +62,9 @@ This is the Sonic Pi application interface. It has three windows. The largest on
   ```
 4.	Click on the play icon at the top of the screen. What happens?
 
-5.	What happens if you type pley 60 and click on the play icon?
+5.	What happens if you type ```pley 60``` and click on the play icon?
 
-  This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you    have a bug that you need to fix. It could be that you have miss-spelt a word like play.
+  This is an example of a bug in your code. In later activities, if the error panel displays text you will know that you    have a bug that you need to fix. It could be that you have miss-spelt a word like ```play```.
 
 6.	Now type:
 
@@ -171,7 +171,7 @@ C   D   E   C   C   D   E   C
 B) Create your own tune using what you have learned so far.
 
 
-##Step 3: Change the Sounds
+## Step 3: Change the Sounds
 
 It’s time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `"pretty_bell"`. 
 
@@ -238,13 +238,13 @@ And then call the function to play by typing `frere`. However this does not solv
 
 	```ruby
 	def frere(n)
-	  play n
-  	  sleep 0.5
-  	  play n + 2
-  	  sleep 0.5
-  	  play n + 4
-  	  sleep 0.5
-  	  play n
+		play n
+		sleep 0.5
+		play n + 2
+		sleep 0.5
+		play n + 4
+		sleep 0.5
+		play n
 	end
 	```
 
@@ -266,17 +266,17 @@ Music often has a repeating backing track with a separate melody played over the
 
 3.	Underneath type your tune. Here I’ve used Frere Jacques from the earlier activity:
 
-  ```ruby
+	```ruby
 	in_thread do
-	  with_synth "saw_beep"
-	  2.times do
-	    play 60
-	    sleep 0.5
-	    play 67
-	    sleep 0.5
-	  end
+		with_synth "saw_beep"
+			2.times do
+			play 60
+			sleep 0.5
+			play 67
+			sleep 0.5
+		end
 	end
-  ```
+	```
   
   This first ‘thread’ will act as the melody of your music. Underneath you can type the code for your backing track or      baseline. 
 
@@ -286,8 +286,8 @@ Music often has a repeating backing track with a separate melody played over the
   in_thread do
     with_synth "pretty_bell"
     30.times do
-    	play 49
-    	sleep 1
+      play 49
+      sleep 1
     end
   end
   ```
