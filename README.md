@@ -86,7 +86,6 @@ The value entered after the word sleep represents time in seconds. Using the val
 
 9.	Now write a sequence of play and sleep to make a cool sounding tune!
 
-
 ## Step 2: Frere Jacques
 
 Now you have mastered the basics of Sonic Pi, let’s code a tune! 
@@ -238,13 +237,13 @@ And then call the function to play by typing `frere`. However this does not solv
 
 	```ruby
 	def frere(n)
-		play n
-		sleep 0.5
-		play n + 2
-		sleep 0.5
-		play n + 4
-		sleep 0.5
-		play n
+      play n
+      sleep 0.5
+      play n + 2
+      sleep 0.5
+      play n + 4
+      sleep 0.5
+      play n
 	end
 	```
 
@@ -266,15 +265,15 @@ Music often has a repeating backing track with a separate melody played over the
 
 3.	Underneath type your tune. Here I’ve used Frere Jacques from the earlier activity:
 
-	```ruby
+    ```ruby
 	in_thread do
-		with_synth "saw_beep"
-			2.times do
-			play 60
-			sleep 0.5
-			play 67
-			sleep 0.5
-		end
+	with_synth "saw_beep"
+      2.times do
+        play 60
+        sleep 0.5
+        play 67
+        sleep 0.5
+      end
 	end
 	```
   
@@ -282,13 +281,13 @@ Music often has a repeating backing track with a separate melody played over the
 
 4.	Type:
 
-  ```ruby
-  in_thread do
-    with_synth "pretty_bell"
-    30.times do
-      play 49
-      sleep 1
+    ```ruby
+    in_thread do
+      with_synth "pretty_bell"
+      30.times do
+        play 49
+        sleep 1
+      end
     end
-  end
-  ```
+    ```
   
