@@ -266,18 +266,18 @@ Music often has a repeating backing track with a separate melody played over the
 3.	Underneath type your tune. Here I’ve used Frere Jacques from the earlier activity:
 
     ```ruby
-	in_thread do
-	with_synth "saw_beep"
+    in_thread do
+      with_synth "saw_beep"
       2.times do
         play 60
         sleep 0.5
         play 67
         sleep 0.5
       end
-	end
-	```
+    end
+    ```
   
-  This first ‘thread’ will act as the melody of your music. Underneath you can type the code for your backing track or      baseline. 
+  This first 'thread' will act as the melody of your music. Underneath you can type the code for your backing track or      baseline. 
 
 4.	Type:
 
