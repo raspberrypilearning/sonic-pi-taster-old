@@ -75,7 +75,7 @@ This is the Sonic Pi application interface. It has three windows. The largest on
   ```
 7.	Click on the play icon at the top of the screen. What happens?
 
-  The computer is playing each note in sequence (ne after the after) but it is happening so fast that to us they sound      like they are playing at the same time. 
+  The computer is playing each note in sequence (one after the after) but it is happening so fast that to us they sound      like they are playing at the same time. 
 
 8.	We need to tell the computer to pause between each note. We can do this by typing the following after each play:
 
