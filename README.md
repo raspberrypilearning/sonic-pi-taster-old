@@ -1,54 +1,16 @@
 # Creating Music with Sonic Pi
 
-We are going to make some funky songs on the Raspberry Pi. A Raspberry Pi is a small computer that we can use to create exciting technology. It was created in the UK by the Raspberry Pi Foundation to help young people like you learn how to code.
+We are going to make some funky songs on the Raspberry Pi, which features amazing HD (high-definition) quality video playback, sports high quality audio and has the ability to play 3D games.
 
-This small computer features amazing HD (high-definition) quality video and playback, sports high quality audio and has the ability to play 3D games.
-
-To get going with your Raspberry Pi, you will need to connect cables and add an SD card before logging in.
-
-## Step 0: Setting Up your Pi
-
-First check that you have all the parts you need to get your Raspberry Pi set up and working:
-
-- Raspberry Pi
-- Micro USB power adaptor
-- An SD card with Raspbian already set up through NOOBS
-- USB keyboard
-- USB mouse
-- HDMI cable
-- A monitor or TV
-- Some headphones 
-
-### Activity Checklist:
-
-1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card. 
-
-2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor. 
-
-3.	Plug in a USB keyboard and Mouse into the USB ports on the Pi.
-
-4.	Plug in your headphones to the 3.5mm sound output jack.
-
-5.	Plug in the micro USB power supply and you should see some text appear on your screen.
-
-6.	When prompted to login type:
-
-	```
-	Login: pi
-	Password: raspberry
-	```
-
-7.	Once you have logged in, type startx to load the desktop.
-
-![](Screen-Shot-2012-12-24-at-10.59.55-1024x722.png "Connecting your Raspberry Pi")
+For this exercise you'll need a set of headphones, speakers or a monitor with built-in speakers.
 
 ## Step 1: First Sounds with Sonic Pi
 
-Let’s play some sounds. 
+Let's play some sounds.
 
-![](Sonic_pi.png "Sonic Pi Interface")
+![](sonic-pi.png "Sonic Pi Interface")
 
-This is the Sonic Pi application interface; it has three windows. The largest one is for writing your code, and we call it the Programming Panel. The top right hand window is the Output Panel, and it displays information about your program as it runs. Underneath is the third window; this is the ‘Error Panel’, which displays information if there is a problem or a bug with your program.
+This is the Sonic Pi application interface; it has three windows. The largest one is for writing your code, and we call it the Programming Panel. The top right hand window is the Output Panel, and it displays information about your program as it runs. Underneath is the third window; this is the ‘Error Panel', which displays information if there is a problem or a bug with your program.
 
 
 ### Activity Checklist:
@@ -91,7 +53,7 @@ This is the Sonic Pi application interface; it has three windows. The largest on
 
 ## Step 2: Frère Jacques
 
-Now you have mastered the basics of Sonic Pi, let’s code a tune! 
+Now you have mastered the basics of Sonic Pi, let's code a tune! 
 
 The values that you have been typing after the word `play` represent notes; in fact, they are MIDI note numbers. This means we can translate songs played on a piano into Sonic Pi!
 
@@ -255,7 +217,7 @@ You can then call the function to play by typing `frere`. However, this does not
 
 ## Step 5: Playing Two Tunes at the Same Time
 
-Music often has a repeating backing track, with a separate melody played over the top. So far in Sonic Pi you have played one tune. Let’s try playing two tunes at the same time!
+Music often has a repeating backing track, with a separate melody played over the top. So far in Sonic Pi you have played one tune. Let's try playing two tunes at the same time!
 
 ### Activity Checklist:
 
@@ -263,7 +225,7 @@ Music often has a repeating backing track, with a separate melody played over th
 
 2.	The code we use to play two tunes at the same time needs to be between `in_thread do` and `end`.
 
-3.	Underneath `in_thread do`, type your tune. Here I’ve used 'Frère Jacques' from the earlier activity:
+3.	Underneath `in_thread do`, type your tune. Here I've used 'Frère Jacques' from the earlier activity:
 
     ```ruby
     in_thread do
