@@ -174,9 +174,9 @@ end
 
 ## Step 4: Using Functions
 
-Currently, your Sonic Pi version of 'Frère Jacques' is playing in a set key. It always plays the same notes from the same octave. To give your program the ability to use a different set of notes we can use a function.
+Currently, your Sonic Pi version of *Frère Jacques* is playing in a set key. It always plays the same notes from the same octave. To give your program the ability to use a different set of notes we can use a function.
 
-Functions are a named group of statements. You could put the first part of 'Frère Jacques' in a function like this:
+Functions are a named group of statements. You could put the first part of *Frère Jacques* in a function like this:
 
 ```ruby
 def frere
