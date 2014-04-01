@@ -62,7 +62,7 @@ We are going to code *Frère Jacques*. The song begins with:
 
 `C D E C` or `60 62 64 60` in MIDI notes.
 
-### Music Notes to MIDI Note Values
+**Music Notes to MIDI Note Values**
 
 | C       | D      | E     | F     | G     | A     | B     |
 | :-----: |:------:|:-----:|:-----:|:-----:|:-----:|:-----:|
