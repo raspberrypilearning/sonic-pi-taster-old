@@ -1,7 +1,6 @@
 # Creating Music with Sonic Pi
 
-We are going to make some funky songs on the Raspberry Pi, which features amazing HD (high-definition) quality video playback, sports high quality audio and has the ability to play 3D games.
-
+We are going to make some funky songs on the Raspberry Pi.
 For this exercise you'll need a set of headphones, speakers or a monitor with built-in speakers.
 
 ## Step 1: First Sounds with Sonic Pi
