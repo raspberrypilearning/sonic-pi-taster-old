@@ -1,7 +1,8 @@
 # Creating Music with Sonic Pi
 
-We are going to make some funky songs on the Raspberry Pi.
-For this exercise you'll need a set of headphones, speakers or a monitor with built-in speakers.
+We are going to make some funky songs on the Raspberry Pi.  For this
+exercise you'll need a set of headphones, speakers or a monitor with
+built-in speakers.
 
 ## Step 1: First Sounds with Sonic Pi
 
@@ -9,7 +10,17 @@ Let's play some sounds.
 
 ![](sonic-pi.png "Sonic Pi Interface")
 
-This is the Sonic Pi application interface; it has three windows. The largest one is for writing your code, and we call it the Programming Panel. The top right hand window is the Output Panel, and it displays information about your program as it runs. Underneath is the third window; this is the ‘Error Panel', which displays information if there is a problem or a bug with your program.
+
+This is the Sonic Pi interface. The top buttons are separated into
+thress sections A, B and C. These provide us with easy ways to start and
+stop our music as well as access to help and preference
+settings. Underneath the buttons are the _Code Editor_ (D) where you'll
+be entering your code and the _Log Viewer_ which is how Sonic Pi will
+tell you what it's doing (other than the sound itself!). Finally at the
+very bottom is the _Help System_ (F) which you can toggle with the
+_Help_ button. This is where the tutorial, examples and documentation
+can be found.
+
 
 ### Activity Checklist:
 
@@ -23,7 +34,7 @@ This is the Sonic Pi application interface; it has three windows. The largest on
     play 60
     ```
 
-4. Click on the play icon at the top of the screen. What happens?
+4. Click on the _Run_ button at the top of the screen. What happens?
 
 5. What happens if you type `pley 60` and click on the play icon?
 
@@ -39,7 +50,7 @@ This is the Sonic Pi application interface; it has three windows. The largest on
 
 7. Click on the play icon at the top of the screen. What happens?
 
-    The computer is playing each note in sequence (one after the after), but it is happening so fast that to us they sound like they are playing at the same time.
+    The computer is playing each note in sequence (one after the after), but it is happening so fast that to us they sound like they are playing at the same time. You can see this in the log because they'll all be associated with the same time.
 
 8. We need to tell the computer to pause between each note. We can do this by typing the following after each `play`:
 
@@ -137,12 +148,12 @@ We are going to code *Frère Jacques*. The song begins with:
 
 It's time to make your tune sound more interesting! We can do this by changing the synthesizer sounds it is using. The default Sonic Pi synth is called `"pretty_bell"`.
 
-To use a different synth, you need to add the code: `with_synth "name of synth"` above the sequence of code you want to use it in.
+To use a different synth, you need to add the code: `use_synth :synth_name` above the sequence of code you want to use it in.
 
-In this example, `"fm"` is the name of the synth:
+In this example, `:fm` is the name of the synth:
 
 ```ruby
-with_synth "fm"
+use_synth :fm
 2.times do
   play 60
   sleep 0.5
@@ -154,18 +165,18 @@ end
 ### Synths to try
 
 ```ruby
-"pretty_bell"
-"dull_bell"
-"beep"
-"saw_beep"
-"fm"
+:pretty_bell
+:dull_bell
+:prophet
+:fm
+:square
 ```
 
 ### Activity Checklist:
 
 1. At the top of your code, above the `2.times do`, add the following:
 
-    `with_synth "fm"`
+    `use_synth :fm`
 
 2. Click on the play icon at the top of the screen.
 
@@ -178,7 +189,7 @@ Currently, your Sonic Pi version of *Frère Jacques* is playing in a set key. It
 Functions are a named group of statements. You could put the first part of *Frère Jacques* in a function like this:
 
 ```ruby
-def frere
+define :frere do
   play 60
   sleep 0.5
   play 62
@@ -199,7 +210,7 @@ You can then call the function to play by typing `frere`. However, this does not
 2. Let's begin by creating a function for the first part of the song:
 
     ```ruby
-    def frere(n)
+    define :frere do |n|
       play n
       sleep 0.5
       play n + 2
@@ -230,7 +241,7 @@ Music often has a repeating backing track, with a separate melody played over th
 
     ```ruby
     in_thread do
-      with_synth "saw_beep"
+      use_synth :saw
       2.times do
         play 60
         sleep 0.5
@@ -246,7 +257,7 @@ Music often has a repeating backing track, with a separate melody played over th
 
     ```ruby
     in_thread do
-      with_synth "pretty_bell"
+      use_synth :pretty_bell
       30.times do
         play 49
         sleep 1
