@@ -1,9 +1,3 @@
-# Creating Music with Sonic Pi
+# Sonic Pi Taster (Sonic Pi V1)
 
-We are going to make some funky songs on the Raspberry Pi.  For this
-exercise you'll need a set of headphones, speakers or a monitor with
-built-in speakers.
-
-## Worksheet
-
-- [Worksheet](worksheet.md)
+Please note this resource has been replaced by [Sonic Pi Taster](https://github.com/raspberrypilearning/sonic-pi-taster) for Sonic Pi V2
